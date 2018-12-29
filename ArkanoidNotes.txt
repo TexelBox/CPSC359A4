@@ -1,0 +1,9 @@
+Ball Collisions:
+
+if moving UP: check TOP portion for collision (if there is one, back up DOWN and set new direction DOWN)
+if moving DOWN: check BOTTOM portion for collision (if there is one, back up UP and set new direction UP)
+if moving RIGHT: check RIGHT portion for collision (if there is one, back up LEFT and set new direction LEFT)
+if moving LEFT: check LEFT portion for collision (if there is one, back up RIGHT and set new direction RIGHT)
+
+Since ball is a circle, only check if non-transparent (white) part overlaps a non-floor pixel
+to indicate a collision.
