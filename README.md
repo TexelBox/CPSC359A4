@@ -1,2 +1,4 @@
 # CPSC359A4
-ARMv7 Assembly Game - Arkanoid
+
+UNIVERSITY OF CALGARY - WINTER 2018
+- ARMv7 Assembly Game - Arkanoid
