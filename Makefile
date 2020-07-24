@@ -1,6 +1,7 @@
 
 # Makefile script for building mixed C & assembly programs CPSC359/RPi3
 # by Mohamad Elzohbi.
+# modified by: Aaron Hornby
 
 
 # Compiled object files directory.
@@ -14,8 +15,8 @@ OBJECTS := $(patsubst $(SOURCE)%.s,$(BUILD)%.o,$(wildcard $(SOURCE)*.s))
 COBJECTS := $(patsubst $(SOURCE)%.c,$(BUILD)%.o,$(wildcard $(SOURCE)*.c))
 
 # Rule to make the executable files.
-myProg: $(OBJECTS) $(COBJECTS)
-	gcc -lwiringPi -o myProg $(OBJECTS) $(COBJECTS)
+arkanoid: $(OBJECTS) $(COBJECTS)
+	gcc -lwiringPi -o arkanoid $(OBJECTS) $(COBJECTS)
 
 # Rule to make the object files.
 $(BUILD)%.o: $(SOURCE)%.s
@@ -26,6 +27,6 @@ $(BUILD)%.o: $(SOURCE)%.c
 
 # Rule to clean files.
 clean: 
-	-rm -f $(BUILD)*.o myProg
+	-rm -f $(BUILD)*.o arkanoid
 
 
