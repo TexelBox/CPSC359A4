@@ -8,7 +8,7 @@
 BUILD = build/
 
 # Source files directory.
-SOURCE = source/
+SOURCE = src/
 
 # Object files to be generated from source.
 OBJECTS := $(patsubst $(SOURCE)%.s,$(BUILD)%.o,$(wildcard $(SOURCE)*.s))
