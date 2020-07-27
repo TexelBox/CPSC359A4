@@ -26,6 +26,7 @@ $(BUILD)%.o: $(SOURCE)%.c
 	gcc -g -c -O1 -Wall -I $(SOURCE) $< -o $@
 
 # Rule to clean files.
+.PHONY: clean
 clean: 
 	-rm -f $(BUILD)*.o arkanoid
 
