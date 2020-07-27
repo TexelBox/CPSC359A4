@@ -15,8 +15,8 @@ OBJECTS := $(patsubst $(SOURCE)%.s,$(BUILD)%.o,$(wildcard $(SOURCE)*.s))
 COBJECTS := $(patsubst $(SOURCE)%.c,$(BUILD)%.o,$(wildcard $(SOURCE)*.c))
 
 # Rule to make the executable files.
-arkanoid: $(OBJECTS) $(COBJECTS)
-	gcc -lwiringPi -o arkanoid $(OBJECTS) $(COBJECTS)
+$(BUILD)arkanoid: $(OBJECTS) $(COBJECTS)
+	gcc -lwiringPi -o $@ $(OBJECTS) $(COBJECTS)
 
 # Rule to make the object files.
 $(BUILD)%.o: $(SOURCE)%.s
@@ -28,6 +28,6 @@ $(BUILD)%.o: $(SOURCE)%.c
 # Rule to clean files.
 .PHONY: clean
 clean: 
-	-rm -f $(BUILD)*.o arkanoid
+	-rm -rf $(BUILD)*
 
 
